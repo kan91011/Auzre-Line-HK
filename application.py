@@ -314,7 +314,7 @@ def handle_content_message(event):
 
     if name != "":
         now = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M")
-        output = "Name ::" + "{0}, {1}".format(name, now)
+        output = "這個人叫: " + "{0}, {1}".format(name, now)
     else:
         plate = azure_ocr(link)
         link_ob = azure_object_detection(link, filename)
