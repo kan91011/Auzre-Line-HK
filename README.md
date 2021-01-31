@@ -1,6 +1,6 @@
 # Computer Vision Line Chat Bot
 
-## On Azure
+## On 
 
 ### Resource
 
