@@ -318,7 +318,7 @@ def handle_content_message(event):
         plate = azure_ocr(link)
         link_ob = azure_object_detection(link, filename)
         if len(plate) > 0:
-            output = "License Plate: {}".format(plate)
+            output = "辨識結果: {}".format(plate)
         else:
             output = azure_describe(link)
         link = link_ob
