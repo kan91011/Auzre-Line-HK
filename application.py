@@ -63,7 +63,10 @@ LINE_BOT = LineBotApi(LINE_TOKEN)
 HANDLER = WebhookHandler(LINE_SECRET)
 IMGUR_CLIENT = Imgur(config=IMGUR_CONFIG)
 FACE_CLIENT = FaceClient(FACE_END, CognitiveServicesCredentials(FACE_KEY))
-PERSON_GROUP_ID = "tibame"
+PERSON_GROUP_ID = "forinragen02"
+
+
+
 
 def azure_describe(url):
     """
