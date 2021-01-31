@@ -307,13 +307,14 @@ def handle_content_message(event):
         for chunk in message_content.iter_content():
             f_w.write(chunk)
     f_w.close()
+
     image = IMGUR_CLIENT.image_upload(filename, "first", "first")
     link = image["response"]["data"]["link"]
     name = azure_face_recognition(filename)
 
     if name != "":
         now = datetime.now(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M")
-        output = "{0}, {1}".format(name, now)
+        output = "Name ::" + "{0}, {1}".format(name, now)
     else:
         plate = azure_ocr(link)
         link_ob = azure_object_detection(link, filename)
